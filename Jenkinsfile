@@ -15,7 +15,7 @@ pipeline {
                 }
         stage('Deliver') {
                        steps {
-                               sh 'npm run start'
+                               bat 'npm run start'
                             }
                         }
 
