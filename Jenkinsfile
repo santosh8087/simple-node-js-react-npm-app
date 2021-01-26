@@ -1,7 +1,7 @@
 pipeline {
   agent {
     node {
-      label 'nodeapp'
+      label 'node'
     }
 
   }
@@ -12,8 +12,6 @@ pipeline {
         bat 'npm run build'
       }
     }
-
- 
 
     stage('Deliver') {
       steps {
