@@ -10,14 +10,12 @@ pipeline {
         }
         stage('Test') {
                     steps {
-                        bat './jenkins/scripts/test.sh'
+                        bat 'npm run test'
                     }
                 }
         stage('Deliver') {
                        steps {
-                               bat './jenkins/scripts/deliver.sh'
-                                input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                                bat './jenkins/scripts/kill.sh'
+                               sh 'npm run start'
                             }
                         }
 
