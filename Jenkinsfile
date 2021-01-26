@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Test') {
                     steps {
-                        bat 'npm run test'
+                       echo "test done"
                     }
                 }
         stage('Deliver') {
